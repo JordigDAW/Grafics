@@ -207,5 +207,11 @@ public class interficieCalc {
     *     resultado = c.calcular(op);
     *     text.setText(resultado);
     **/
-
+    
+    /*
+    *En la classe calculadora
+    *ScriptEngineManager sem = ScriptEngineManager;
+    *ScriptEngine se = sem.getEngineByName("JavaScript");
+    *String resultado = se.eval(String op).toString();
+    **/
 }
