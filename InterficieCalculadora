@@ -196,5 +196,16 @@ public class interficieCalc {
         calc.getContentPane().add(botoIgual);
         botoIgual.setBounds(210, 410, 90, 85);
     }
+    
+    /*
+    * En el boto d'igual
+    * JButton botoIgual = new JButton("=");
+    * botoIgual.addActionListener(new ActionListener() {
+    *     public void actionPerformed(ActionEvent arg0) {
+    *     String op, resultado;
+    *     op = text.getText();
+    *     resultado = c.calcular(op);
+    *     text.setText(resultado);
+    **/
 
 }
