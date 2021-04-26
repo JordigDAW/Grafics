@@ -2,10 +2,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class interficieCalc {
+public class interficieCalc  extends calculadora{
 
     //Camps utilitzats en la finestra
     private JFrame calc;
+    public String valors;
+    public String signe;
+    calculadora calcul = new calculadora();
 
     //Classe main on s'executa el programa
     public static void main(String[] args) {
@@ -24,8 +27,7 @@ public class interficieCalc {
     //Constructor de la classe
     public interficieCalc() {
         inicialitzacio();
-        botoNumeros();
-        botoOperacions();
+        botons();
     }
 
     //Creacio de la finestra
@@ -33,17 +35,17 @@ public class interficieCalc {
         //Declaracio d'un nou JFrame
         calc = new JFrame("Calculadora");
         calc.setResizable(false);
-        calc.setBounds(100, 100, 420, 550);
+        calc.setBounds(100, 100, 430, 550);
         calc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         calc.getContentPane().setLayout(null);
     }
 
     //Apartat dels botons amb numeros
-    private void botoNumeros() {
+    public void botons() {
         JTextField text = new JTextField();
         text.setHorizontalAlignment(SwingConstants.LEFT);
         text.setEditable(false);
-        text.setBounds(10, 10, 395, 90);
+        text.setBounds(10, 10, 290, 90);
         text.setBackground(Color.WHITE);
         calc.getContentPane().add(text);
         text.setColumns(10);
@@ -52,9 +54,10 @@ public class interficieCalc {
         JButton boto1 = new JButton("1");
         boto1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                text.setText("1");
+            	text.setText(text.getText() + "1");
                 text.setHorizontalAlignment(SwingConstants.RIGHT);
                 text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
             }
         });
         calc.getContentPane().add(boto1);
@@ -64,9 +67,10 @@ public class interficieCalc {
         JButton boto2 = new JButton("2");
         boto2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                text.setText("2");
+            	text.setText(text.getText() + "2");
                 text.setHorizontalAlignment(SwingConstants.RIGHT);
                 text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
             }
         });
         calc.getContentPane().add(boto2);
@@ -76,9 +80,10 @@ public class interficieCalc {
         JButton boto3 = new JButton("3");
         boto3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                text.setText("3");
+            	text.setText(text.getText() + "3");
                 text.setHorizontalAlignment(SwingConstants.RIGHT);
                 text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
             }
         });
         calc.getContentPane().add(boto3);
@@ -88,9 +93,10 @@ public class interficieCalc {
         JButton boto4 = new JButton("4");
         boto4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                text.setText("4");
+            	text.setText(text.getText() + "4");
                 text.setHorizontalAlignment(SwingConstants.RIGHT);
                 text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
             }
         });
         calc.getContentPane().add(boto4);
@@ -100,9 +106,10 @@ public class interficieCalc {
         JButton boto5 = new JButton("5");
         boto5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                text.setText("5");
+            	text.setText(text.getText() + "5");
                 text.setHorizontalAlignment(SwingConstants.RIGHT);
                 text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
             }
         });
         calc.getContentPane().add(boto5);
@@ -112,9 +119,10 @@ public class interficieCalc {
         JButton boto6 = new JButton("6");
         boto6.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                text.setText("6");
+            	text.setText(text.getText() + "6");
                 text.setHorizontalAlignment(SwingConstants.RIGHT);
                 text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
             }
         });
         calc.getContentPane().add(boto6);
@@ -124,9 +132,10 @@ public class interficieCalc {
         JButton boto7 = new JButton("7");
         boto7.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                text.setText("7");
+            	text.setText(text.getText() + "7");
                 text.setHorizontalAlignment(SwingConstants.RIGHT);
                 text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
             }
         });
         calc.getContentPane().add(boto7);
@@ -136,9 +145,10 @@ public class interficieCalc {
         JButton boto8 = new JButton("8");
         boto8.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                text.setText("8");
+            	text.setText(text.getText() + "8");
                 text.setHorizontalAlignment(SwingConstants.RIGHT);
                 text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
             }
         });
         calc.getContentPane().add(boto8);
@@ -148,9 +158,10 @@ public class interficieCalc {
         JButton boto9 = new JButton("9");
         boto9.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                text.setText("9");
+            	text.setText(text.getText() + "9");
                 text.setHorizontalAlignment(SwingConstants.RIGHT);
                 text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
             }
         });
         calc.getContentPane().add(boto9);
@@ -160,114 +171,103 @@ public class interficieCalc {
         JButton boto0 = new JButton("0");
         boto0.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
-                text.setText("0");
+            	text.setText(text.getText() + "0");
                 text.setHorizontalAlignment(SwingConstants.RIGHT);
                 text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
             }
         });
         calc.getContentPane().add(boto0);
         boto0.setBounds(10, 410, 90, 85);
-    }
+    
 
     //Apartat amb els botons per realitzar les operacions
-    private void botoOperacions() {
         //Boto de suma
         JButton botoSum = new JButton("+");
+        botoSum.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+            	text.setText(text.getText() + "+");
+                text.setHorizontalAlignment(SwingConstants.RIGHT);
+                text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
+            }
+        });
         calc.getContentPane().add(botoSum);
         botoSum.setBounds(310, 110, 95, 85);
 
         //Boto de resta
         JButton botoRest = new JButton("-");
+        botoRest.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+            	text.setText(text.getText() + "-");
+                text.setHorizontalAlignment(SwingConstants.RIGHT);
+                text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
+            }
+        });
         calc.getContentPane().add(botoRest);
         botoRest.setBounds(310, 210, 95, 85);
 
         //Boto de multiplicacio
         JButton botoMult = new JButton("x");
+        botoMult.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+            	text.setText(text.getText() + "x");
+                text.setHorizontalAlignment(SwingConstants.RIGHT);
+                text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
+            }
+        });
         calc.getContentPane().add(botoMult);
         botoMult.setBounds(310, 310, 95, 85);
 
         //Boto de divisio
         JButton botoDiv = new JButton("/");
+        botoDiv.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+            	text.setText(text.getText() + "/");
+                text.setHorizontalAlignment(SwingConstants.RIGHT);
+                text.setFont(new Font("Plain", Font.PLAIN, 28));
+                valors = text.getText();
+            }
+        });
         calc.getContentPane().add(botoDiv);
         botoDiv.setBounds(310, 410, 95, 85);
 
         //Boto d'igual
         JButton botoIgual = new JButton("=");
+        botoIgual.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+            	String resultat;
+            	String op;
+
+                valors = text.getText();
+                resultat = calcul.operacions(valors);
+                text.setText(resultat);
+            }
+        });
         calc.getContentPane().add(botoIgual);
         botoIgual.setBounds(210, 410, 90, 85);
+           
+        //Boto per marcar els decimals
+        JButton botoDec = new JButton(".");
+        botoDec.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent arg0) {
+        		text.setText(text.getText() + ".");
+        		text.setHorizontalAlignment(SwingConstants.RIGHT);
+        		text.setFont(new Font("Plain", Font.PLAIN, 28));
+        	}
+        });
+        calc.getContentPane().add(botoDec);
+        botoDec.setBounds(110, 410, 90, 85);
+        
+        JButton botoNeteja = new JButton("C");
+        botoNeteja.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent arg0) {
+        		text.setText("");
+        	}
+        });
+        botoNeteja.setBounds(310, 10, 95, 85);
+        calc.getContentPane().add(botoNeteja);
     }
-
-/*-----------------------------------------------------------*/
-//CORRECIONS A TINDRE EN CONTER PER A ARREGLAR LA CALCULADORA
-    /*
-    * En el boto d'igual
-    * JButton botoIgual = new JButton("=");
-    * botoIgual.addActionListener(new ActionListener() {
-    *     public void actionPerformed(ActionEvent arg0) {
-    *     String op, resultado;
-    *     op = text.getText();
-    *     resultado = c.calcular(op);
-    *     text.setText(resultado);
-    **/
-    
-    /*
-    *En la classe calculadora
-    *ScriptEngineManager sem = ScriptEngineManager;
-    *ScriptEngine se = sem.getEngineByName("JavaScript");
-    *String resultado = se.eval(String op).toString();
-    **/
-    
-    /*import javax.script.*;
-
-public class calculadora {
-	
-	//ScriptEngineManager sem = ScriptEngineManager
-  	//ScriptEngine se = sem.getEngineByName("JavaScript");
-	//String resultado = se.eval(String op).toString(); 
-     
-	
-	public void calculadora(String op) {
-		ScriptEngineManager sem = new ScriptEngineManager();
-		ScriptEngine se = sem.getEngineByName(op);
-		
-		try {
-			String resultado = se.eval(op).toString();
-		} catch (ScriptException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Syntax ERROR");
-		}
-	}
-	
-}*/
-/*-----------------------------------------------------------*/
-String op, resultado;
-        		op = text.getText();
-        		//resultado = calcul.calculadora(op);
-        		//text.setText(resultado);
-
-
-import javax.script.*;
-
-public class calculadora {
-	
-	//ScriptEngineManager sem = ScriptEngineManager
-  	//ScriptEngine se = sem.getEngineByName("JavaScript");
-	//String resultado = se.eval(String op).toString(); 
-	
-	public String nombre(String op) {
-		ScriptEngineManager sem = new ScriptEngineManager();
-		ScriptEngine se = sem.getEngineByName(op);
-		
-		try {
-			String resultado = se.eval(op).toString();
-			return resultado;
-		} catch (ScriptException e) {
-			// TODO Auto-generated catch block
-			//System.out.println("Syntax ERROR");
-			return "Syntax ERROR";
-		}
-	}
-	
-}
-
 }
