@@ -245,4 +245,29 @@ String op, resultado;
         		//resultado = calcul.calculadora(op);
         		//text.setText(resultado);
 
+
+import javax.script.*;
+
+public class calculadora {
+	
+	//ScriptEngineManager sem = ScriptEngineManager
+  	//ScriptEngine se = sem.getEngineByName("JavaScript");
+	//String resultado = se.eval(String op).toString(); 
+	
+	public String nombre(String op) {
+		ScriptEngineManager sem = new ScriptEngineManager();
+		ScriptEngine se = sem.getEngineByName(op);
+		
+		try {
+			String resultado = se.eval(op).toString();
+			return resultado;
+		} catch (ScriptException e) {
+			// TODO Auto-generated catch block
+			//System.out.println("Syntax ERROR");
+			return "Syntax ERROR";
+		}
+	}
+	
+}
+
 }
