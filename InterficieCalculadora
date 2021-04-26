@@ -196,7 +196,9 @@ public class interficieCalc {
         calc.getContentPane().add(botoIgual);
         botoIgual.setBounds(210, 410, 90, 85);
     }
-    
+
+/*-----------------------------------------------------------*/
+//CORRECIONS A TINDRE EN CONTER PER A ARREGLAR LA CALCULADORA
     /*
     * En el boto d'igual
     * JButton botoIgual = new JButton("=");
@@ -214,4 +216,33 @@ public class interficieCalc {
     *ScriptEngine se = sem.getEngineByName("JavaScript");
     *String resultado = se.eval(String op).toString();
     **/
+    
+    /*import javax.script.*;
+
+public class calculadora {
+	
+	//ScriptEngineManager sem = ScriptEngineManager
+  	//ScriptEngine se = sem.getEngineByName("JavaScript");
+	//String resultado = se.eval(String op).toString(); 
+     
+	
+	public void calculadora(String op) {
+		ScriptEngineManager sem = new ScriptEngineManager();
+		ScriptEngine se = sem.getEngineByName(op);
+		
+		try {
+			String resultado = se.eval(op).toString();
+		} catch (ScriptException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Syntax ERROR");
+		}
+	}
+	
+}*/
+/*-----------------------------------------------------------*/
+String op, resultado;
+        		op = text.getText();
+        		//resultado = calcul.calculadora(op);
+        		//text.setText(resultado);
+
 }
